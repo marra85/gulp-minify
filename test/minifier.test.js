@@ -99,4 +99,14 @@ describe('test/minifier.test.js', () => {
     });
   });
 
+  it('should minify null coalescing and optional chaining ok', (done) => {
+    const project = 'demo7';
+    run(project).on('end', () => {
+      const buildPath = `${build}/${project}`;
+      assert(fs.existsSync(path.join(buildPath, 'index.js')));
+      assert(fs.existsSync(path.join(buildPath, 'index-min.js')));
+      done();
+    });
+  });
+
 });
