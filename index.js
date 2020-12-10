@@ -56,7 +56,7 @@ module.exports = function(opt) {
   //Set options output to itself, or, if null an empty object.
   options.output =  options.output ||  {};
 
-  function minify(file, encoding, callback) {
+  async function minify(file, encoding, callback) {
 
     if (file.isNull()) {
       this.push(file);
@@ -125,7 +125,7 @@ module.exports = function(opt) {
     };
 
     try {
-      mangled = uglify.minify(String(file.contents), uglifyOptions);
+      mangled = await uglify.minify(String(file.contents), uglifyOptions);
       min_file.contents = new Buffer(mangled.code.replace(reSourceMapComment, ''));
     } catch (e) {
       this.emit('end');
