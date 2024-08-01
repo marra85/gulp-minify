@@ -1,8 +1,9 @@
 {
   "name": "gulp-minify",
-  "version": "3.1.0",
+  "version": "4.0.0",
   "description": "Js minify plugin for gulp",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
     "test": "mocha"
   },
@@ -11,29 +12,39 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/hustxiaoc/gulp-minify.git"
+    "url": "https://github.com/marra85/gulp-minify.git"
   },
-  "author": "308512341@qq.com",
+  "contributors": [
+    {
+      "name": "hustxiaoc",
+      "email": "308512341@qq.com",
+      "url": "https://github.com/hustxiaoc"
+    },
+    {
+      "name": "Marra85",
+      "url": "https://github.com/marra85"
+    }
+  ],
   "dependencies": {
-    "ansi-colors": "^1.0.1",
-    "minimatch": "^3.0.2",
-    "plugin-error": "^0.1.2",
-    "terser": "^5.5.1",
-    "through2": "^2.0.3",
-    "vinyl": "^2.1.0"
+    "ansi-colors": "^4.1.0",
+    "minimatch": "^9.0.0",
+    "plugin-error": "^2.0.0",
+    "terser": "^5.31.0",
+    "through2": "^4.0.0",
+    "vinyl": "^3.0.0"
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hustxiaoc/gulp-minify/issues"
+    "url": "https://github.com/marra85/gulp-minify/issues"
   },
-  "homepage": "https://github.com/hustxiaoc/gulp-minify",
+  "homepage": "https://github.com/marra85/gulp-minify",
   "readmeFilename": "README.md",
   "devDependencies": {
-    "gulp": "^4.0.0",
-    "mocha": "^5.2.0",
-    "rimraf": "^2.6.2"
+    "gulp": "^5.0.0",
+    "mocha": "^10.7.0",
+    "rimraf": "^5.0.0"
   },
   "engines": {
-    "node": ">= 6.0.0"
+    "node": ">= 16.0.0"
   }
 }
