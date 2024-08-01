@@ -129,6 +129,7 @@ module.exports = function (opt) {
     });
 
     const uglifyOptions = {
+      module: options.module !== undefined ? options.module : false,
       mangle: options.mangle !== undefined ? options.mangle : true,
       output: options.output !== undefined ? options.output : null,
       compress: options.compress !== undefined ? options.compress : {},
